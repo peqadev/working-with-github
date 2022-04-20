@@ -27,4 +27,27 @@ Git es un software de control de versiones diseñado por Linus Torvalds, pensand
 - **`git checkout -b <nombre_rama_nueva>`**: Crea una rama a partir de la que te encuentres parado con el nombre “nombre_rama_nueva”, y luego salta sobre la rama nueva, por lo que quedas parado en esta última.
     * Ejemplo: Estando situado en una rama llamada `master`, al ejecutar el comando `git checkout -b develop`, generará una *nueva* rama llamada `deve
 
-- **`git checkout -t origin/<nombre_rama>:`**: Si existe una rama remota de nombre “nombre_rama”, al ejecutar este comando se crea una rama local con el nombre “nombre_rama” para hacer un seguimiento de la rama remota con el mismo nombre.
+- **`git checkout -t origin/<nombre_rama>`**: Si existe una rama remota de nombre “nombre_rama”, al ejecutar este comando se crea una rama local con el nombre “nombre_rama” para hacer un seguimiento de la rama remota con el mismo nombre.
+
+- **`git branch`**: Lista toda las ramas locales.
+
+- **`git branch -a`**: Lista todas las ramas locales y remotas.
+
+- **`git branch -r`**: Lista todas las ramas remotas.
+
+- **`git branch -d <nombre_rama>`**: Elimina la rama `<nombre_rama>`.
+    * Ejemplo: Estando situado en una rama llamada `master`, al ejecutar el comando `git branch -d develop`, eliminaría la rama `develop`. Si por el contrario, intentas eliminar la rama `master` teniendo esta misma rama seleccionada, git lanzaría el error: `error: Cannot delete branch 'master' checked out at <directorio>`.
+
+- **`git push origin <nombre_rama>`**: Aplica el commit de los cambios, desde el `branch` local, al branch `nombre_rama` que se encuentra en el repositorio `origin`.
+
+- **`git remote prune origin`**: Actualiza tu repositorio remoto en caso que algún otro desarrollador haya eliminado alguna rama remota.
+
+- **`git reset --hard HEAD`**: Elimina los cambios realizados que aún no se hayan hecho *commit*, pero que ya fueron agregados al *STAGE* a través del comando `git add`.
+
+- **`git revert <hash_commit>`**: Revierte el commit realizado, identificado por el `hash_commit`.
+
+## SaaS más conocidos que utilizan git
+
+- Github
+- Gitlab
+- Bitbucket
